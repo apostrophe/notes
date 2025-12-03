@@ -8,8 +8,18 @@ git config set user.name "Ben Schilke2"
 git config core.sshCommand "ssh -v" # -v, -vv, -vvv
 # disable
 git config unset core.sshCommand
+# or include in GIT_SSH_COMMAND (use -vvv for extreme verbose)
+GIT_SSH_COMMAND='ssh -v -i ~/.ssh/keypair' git push origin master
 
 # specify specific key-pair
 GIT_SSH_COMMAND='ssh -i ~/.ssh/keypair' git push origin master
-
 ```
+
+**2 accounts on Mac - Solution**
+1. Deactivate ~/.ssh/config file (renamed to con_fig)
+2. add to ssh-agent:
+    `ssh-add --apple-use-keychain ~/.ssh/worklaptop-apostrophe-github-acct`
+    view current list:
+      `ssh-add -l`
+3. run command with key explictly mentioned:
+    `GIT_SSH_COMMAND='ssh -i ~/.ssh/worklaptop-apostrophe-github-acct' git push -u origin main`
