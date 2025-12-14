@@ -4,10 +4,12 @@ git config --get credential.helper
 git config set user.name "Ben Schilke2"
 
 
+# display ssh auth verbose mode
+git config --get core.sshCommand 
 # enable verbose mode with ssh auth
 git config core.sshCommand "ssh -v" # -v, -vv, -vvv
 # disable
-git config unset core.sshCommand
+git config --unset core.sshCommand
 # or include in GIT_SSH_COMMAND (use -vvv for extreme verbose)
 GIT_SSH_COMMAND='ssh -v -i ~/.ssh/keypair' git push origin master
 
@@ -23,3 +25,10 @@ GIT_SSH_COMMAND='ssh -i ~/.ssh/keypair' git push origin master
       `ssh-add -l`
 3. run command with key explictly mentioned:
     `GIT_SSH_COMMAND='ssh -i ~/.ssh/worklaptop-apostrophe-github-acct' git push -u origin main`
+
+
+**Standard commands**
+```bash
+git push origin feature/CWEL-565-update-order-status
+```
+

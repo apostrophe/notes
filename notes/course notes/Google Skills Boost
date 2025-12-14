@@ -1,0 +1,43 @@
+
+### Developing Applications w/Google Cloud: Foundations
+
+- Cloud development allows for (full) scalability[1], high availability, reduced costs, global access(?)
+
+Best Practices
+- allow for **scalability, high availability, security, 'global access'** (these are minimal standarsd, 'table stakes' (poker term?))
+- **data isolation to a specific region** for security or compliance reasons
+- store code in a **code repository**
+- **use dependency manager** to manage dependencies
+  - list dependencies and versions in the project
+  - lean on dep mgr (maven, npm, nuget) to pull down those dependencies, manage versions, etc
+- store **configuration settings** outside of your code as environment variables
+  - allows environments the code is running in to dictate configuration
+- scope of applications should be considered as features are added
+  - applications should be as single-minded in purpose as possible
+  - one benefit is being able to scale
+  - example:
+    - currently pup app backend is an interface for order data between our data store and the FE
+    - if we started to support, for example, diverting orders to a customer's orders and we had to build an API to support this, there'd be a good argument for branching this off into another service.
+      - you'd be able to scale this differently than the original (for example, if only a few stores supported this feature, and the pup app spread to 50 PUPs, if these 2 services are separate microservices, you could scale the BE that supports orders wihtout having to also scale the order-diversion service) 
+  - consider the costs and benefits of refactoring a monolithic app to two or more microservices, because the effort to break them out, test and fix bugs can be significant, but the long-term benefits can also be significant
+- keep operations in the **user thread** to a minimum
+- perform backend operations **asynchronously**
+- use **event-driven processing** whenever possible
+  - example async process: processing uploaded images
+    - upload images to bucket storage
+    - create an image-processing cloud-run function that is triggered when an image is added to bucket storage
+- **tightly-coupled components can make an application less resilient to failures, spikes in traffic, and changes to services**
+- event/message queues can be used to implement
+    - loose coupling,
+    - perform asynchronous processing, and
+    - buffer requests if traffic spikes
+    - examples:
+      - loose coupling: 
+      - perform asynchronous processing, and
+      - buffer requests if traffic spikes
+
+- accessing a commonly **shared state** can be a bottleneck
+
+
+
+[1] You can have a very small, simple application and only the simplest, pay-as-you-go infrastructure required to support it (not a full server, network, etc an on-prem solution would require)

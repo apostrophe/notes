@@ -19,7 +19,9 @@
 
 
 ### Developing Applications w/Google Cloud: Foundations
-https://www.skills.google/course_templates/874
+https://www.skills.google/course_templates/874 (being retire?)
+https://www.skills.google/paths/11 - cloud engineer path
+https://www.skills.google/catalog?format%5B%5D=learning_plans - engineer paths (cloud, network, security, architect)
 
 - Cloud development allows for (full) scalability[1], high availability, reduced costs, global access(?)
 
