@@ -17,7 +17,7 @@ GIT_SSH_COMMAND='ssh -v -i ~/.ssh/keypair' git push origin master
 GIT_SSH_COMMAND='ssh -i ~/.ssh/keypair' git push origin master
 ```
 
-**2 accounts on Mac - Solution**
+**2 accounts on Mac - Solution** -> See Simpler Approach (below)
 1. Deactivate ~/.ssh/config file (renamed to con_fig)
 2. add to ssh-agent:
     `ssh-add --apple-use-keychain ~/.ssh/worklaptop-apostrophe-github-acct`
@@ -25,6 +25,10 @@ GIT_SSH_COMMAND='ssh -i ~/.ssh/keypair' git push origin master
       `ssh-add -l`
 3. run command with key explictly mentioned:
     `GIT_SSH_COMMAND='ssh -i ~/.ssh/worklaptop-apostrophe-github-acct' git push -u origin main`
+
+**Simpler Approach**
+1. Give 'ikea' user account access to personal repo
+2. Commit using this account
 
 
 **Standard commands**
