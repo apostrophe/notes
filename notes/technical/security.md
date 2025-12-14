@@ -1,11 +1,11 @@
 TOTP (Time-based One-Time Password)
 - the 6-digit code created in authenticator (it has other use cases)
 - algorithm:
- - shared secret between server and client (for a particular identity), often shared via QR Code
- - time window is divided into a fix interval (typically 30s)
- - hash computed using secret key and current time window
- - 6-8 digit code is extracted from hash
- - both client and server generate the same code
+  - shared secret between server and client (for a particular identity), often shared via QR Code
+  - time window is divided into a fix interval (typically 30s)
+  - hash computed using secret key and current time window
+  - 6-8 digit code is extracted from hash
+  - both client and server generate the same code
 
 
 Identity vs Access Token
