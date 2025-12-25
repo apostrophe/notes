@@ -80,6 +80,13 @@ when (x) {
     2, 3 -> println("Two or Three")
     else -> println("Other")
 }
+
+var y: String? = when (x) {
+    1 -> "One"
+    2, 3 -> "Two or Three"
+    else -> null
+}
+
 ```
 
 **loops: for, foreach, while, do**
@@ -101,7 +108,8 @@ list.forEach { item ->
 **classes**
 
 ```kotlin
-// declared a class
+// class declarations are simply the class keyword, the name of the class, 
+// and a list of class fields as parameters
 class Contact(val id: Int, var email: String)
 
 fun main() {
@@ -172,7 +180,7 @@ functions can be passed to other functions
 ```kotlin
 ```
 
-**data classes**
+**data classes**  
 Data classes in Kotlin are special classes designed to hold data. They automatically generate useful methods like `equals()`, `hashCode()`, `toString()`, and `copy()`.
 
 Example:
