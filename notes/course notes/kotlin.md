@@ -41,6 +41,15 @@ val length = nullable?.length
 
 // Elvis operator
 val length = nullable?.length ?: 0
+
+
+// default is non-nullable
+var someString = "a string"
+someString = null // assigning variable to null results in compile-time error
+
+var isItNullable: String? = null;
+var len = isItNullable?.length;
+println(len) // prints null -- so len is a nullable value
 ```
 
 **data classes**
