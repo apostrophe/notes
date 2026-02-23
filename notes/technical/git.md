@@ -97,7 +97,7 @@ $ git branch -u RemoteBranchName LocalBranchName
 
 **How to Use Different Users/Accounts Push to Their Own Repos?**
 
-
+Solution: Use only a single user/account (eg benjamin.schilke@ingka) and add them in personal repo
 
 
 ```bash
