@@ -14,4 +14,14 @@ unset NEXT_PUBLIC_PUP_APP_DEV
 
 echo $NEXT_PUBLIC_PUP_APP_DEV
 
+
+
+# what service is using port x?
+lsof -i:5432 | grep LISTEN
+
+# ps aux --forest equivalent
+pstree | less
 ```
+
+
+what services

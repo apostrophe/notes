@@ -1,3 +1,24 @@
+
+### auth
+
+```bash
+# authenticate your code & google sdk's
+gcloud auth login
+gcloud auth application-default login
+
+# Check gcloud auth status
+gcloud auth list
+
+# Test authentication by making an API call
+gcloud projects list
+
+# Check application-default credentials
+gcloud auth application-default print-access-token
+```
+
+
+### general
+
 ```bash
 # list of projects
 gcloud projects list format --help
@@ -5,8 +26,6 @@ gcloud projects list format --help
 # json format with filter
 gcloud projects list --format="json" \
   --filter="labels.env=test AND labels.version=alpha"
-
-gcloud auth application-default login
 
 gcloud components update
 
