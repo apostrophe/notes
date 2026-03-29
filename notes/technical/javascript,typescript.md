@@ -1,0 +1,3 @@
+
+**`.!` notation**  
+The `!.` (as in `this.db!.read()` notation in TypeScript is called the "non-null assertion operator." When you write `this.db!.read`, you are telling the TypeScript compiler: "I am certain that this.db is not null or undefined at this point, so don't complain about possible null/undefined access." It does not change runtime behavior—it's only for type checking. Use it when you know a value is definitely present, but TypeScript's type system can't guarantee it

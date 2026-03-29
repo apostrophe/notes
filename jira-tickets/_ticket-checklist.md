@@ -11,6 +11,24 @@ Ticket: Sales Item API
 - [ ] add `/src` to `.prettierignore` to avoid formatting warnings
 - [ ] make changes
     - [ ] commit often
+    - [ ] pull in latest from main
+        on pricera team, use rebase:  
+            `git pull origin main --rebase`
+    - [ ] squash commits - what are other people's opinions?  
+- **PRICERA**
+    - [ ] e2e tests are flakey
+        - [ ] make as many changes locally as possible
+        - [ ] make FE & BE changes locally using the same branch name
+        - [ ] run unit tests locally
+        - [ ] run integration tests locally
+        - [ ] run e2e tests locally
+        - [ ] confirm flyway sql will run
+            - [ ] run sql against containerized db
+            - [ ] confirm there's no filename conflicts
+        - [ ] copilot: code review
+        - [ ] create PR
+        - [ ] pull in main changes ASAP
+            - [ ] or do this locally?
 - [ ] double-check acceptance criteria
 - [ ] review changes with scrum team and/or engineering team
 

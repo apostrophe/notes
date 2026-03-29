@@ -42,6 +42,9 @@ ssh bschilke@192.168.0.151
 ### JavaScript
 display json object formatted:
     console.log(JSON.stringify(updatedOrder,null,2));
+with object name:
+    console.log(`pgConnection: ${JSON.stringify(pgConnection,null,2)}`);
+
 
 turning off lint checks
 /* eslint no-await-in-loop: "off", no-restricted-syntax: "off" */
