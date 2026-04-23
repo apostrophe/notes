@@ -23,20 +23,29 @@ node_modules, *.json, *.scss, *.html, *.js, *.yaml
 
 ### Terraform
 *cd into /dev or /prod folder*
+```terraform
 terraform init
 terraform plan -no-color -lock=false
 terraform apply -auto-approve -input=false -lock=false
+```
 
 ### Logs Explorer - Queries
+```
 resource.type = "cloud_run_revision"
 resource.labels.service_name = "pup-app-fe"
 resource.labels.location = "us-east4"
 timestamp>="2025-10-10T16:23:00Z" AND timestamp<="2025-10-11T16:25:00Z"
 
 Example Queries: https://cloud.google.com/logging/docs/view/query-library
+```
 
-
+### Misc
+```
 ssh bschilke@192.168.0.151
+
+# generate uuid and convert to lowercase
+uuidgen | tr A-Z a-z
+```
 
 
 ### JavaScript

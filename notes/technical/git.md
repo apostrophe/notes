@@ -18,7 +18,7 @@ git config set user.name "Ben Schilke2"
 ### Standard Commands
 ```bash
 git pull --ff-only
-git merge --rebase
+git merge {branch to merge changes from} --rebase
 git push origin feature/CWEL-565-update-order-status
 
 git commit --amend --no-edit
@@ -41,12 +41,19 @@ git branch -v # list remote branches verbose
 # stash individual files
 git stash push -m "templates to add later" -- path/to/file1 /path/to/file2 /path/to/file3
 
-# show details of stash (actual changes)
+# stash just what's staged
+git stash push --staged -m ""
+
+# stash a single file
+git stash push -m "describe changes to filename.ext" filename.ext
+
+# show details of stash (file contents)
 git stash show -p stash@{0}
 
-git stash apply # applies the latest (stash{0})
+# applies the latest (stash{0}), does not remove from stash
+git stash apply 
 
-# apply a specific stash:
+# apply a specific stash (doesn't remove):
 git stash apply stash@{1}
 ```
 
@@ -177,7 +184,7 @@ remedy: `git pull origin <feature name>`
 1. git takes the content of files in the repo, compresses them using Zlib, maps the contents of files to a hash and stores those compressed contents in .git/objects/xx/xxxxx where xx/xxxxx is the first 2 chars of the hash and then the rest of the hash
 2. when adding these contents to the index/staging, a binary index file is updated  
 3. when the changes are committed, the mapping of the commit, to a tree object and then to the blob objects can be found using the below command:  
-`git cat-files -p <hash>`  
+`git cat-file -p <hash>`  
     a. enter the commit hash, and get a commit file that looks like this:
     ```
     tree 422b1e052083e26b8de9eabd1423ed22f8dbcaf4

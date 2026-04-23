@@ -266,4 +266,71 @@ Any code changes that update PII shoud be raised and considered for a change to 
 
 
 
+### Personal Data
+- what is personal data? data that can be used to identify an individual
+  - doesn't include last 4 digits of cc b/c by itself it can't be tracked back to individual (but i'd argue it should still be protected b/c combined with other data it could be )
+  - includes anyone whose personal data we process
+  - includes employees of business partners, vendors
+  - not just confidential data (financial, address, etc), but also:
+    - Health (physical and mental).
+    - Philosophical and religious beliefs .
+    - Political opinions.
+    - Sexual life.
+    - Race or ethnic origin.
+    - Trade union membership.
+    - Personal identity numbers.
+    - Genetic and biometric data.
+    - Criminal convictions.
+    - Photo
+    - Any other data type, according to local applicable law.
+  - 'processing' includes: obtaining, recording, storing, updating, holding, altering, reading, analysing, transferring, archiving and deleting personal data
 
+#### Principles
+**Purpose of use**  
+
+Personal data may only be collected for specified, explicit, legitimate and communicated purposes and must not be further processed in a manner that is incompatible with those purposes.
+
+This means that we must be clear about what we are collecting personal data for and not use the data for other purposes.
+A good question to ask yourself is: “Can the many people understand what exactly we plan to do with their data?”
+
+**Adequate, relevant and non-excessive collection**  
+
+If we do not need personal data, we shouldn’t collect it. Only collect the minimum amount of personal data required for a specific purpose.
+
+The personal data collected must be adequate and relevant to the purpose for which it was collected. Collection of any personal data which could be regarded as excessive or irrelevant should always be avoided.
+A good question to ask yourself is: “What is the impact if I do not have this personal data?”
+
+**Transparent communication**
+
+Always be transparent when you communicate with people about how you use their personal data. One way to do this is through privacy notices.
+
+**Accuracy, quality and completeness**
+
+If the personal data we collect is not of a good quality, we will not be able to use it effectively. 
+
+Something that may affect our customers and co-workers. If, for example, we don’t have a correct address for a customer, we may end up delivering their products to the wrong place.
+
+This means that we must have processes in place to secure the right data quality. Both when data is collected and over time.
+We must make sure that personal data is kept up to date, accurate, and sufficient for the purposes for which it is processed.
+
+
+**Retention and deletion**
+
+Personal data must not be processed for longer than necessary. This includes personal data stored on back up devices (e.g. hard drives) and hard copy or offline records (e.g. documents).
+
+This means that we must take steps to identify for how long data is needed to fulfill the purpose it was collected for. This should be done considering not just business, but legal reasons for retaining data (e.g. reporting obligations to tax authorities).
+
+
+**Processing personal data**
+
+Yes. Whenever we process personal data, we must have the legal right to do so. This is known as having a legal basis for processing.
+Four of the most common bases for processing personal data are:
+Having a contract with the individual.
+Having a legal obligation.
+Having a legitimate interest.
+Getting the individual’s consent.
+
+
+**Data Privacy Impact Assessment (DPIA)**
+
+A Data Privacy Impact Assessment (DPIA) is a methodology that consists of a set of questions. The questions are used to identify the most effective ways to comply with our data protection obligations and to protect the privacy of individuals when undertaking projects or initiatives that process personal data.
