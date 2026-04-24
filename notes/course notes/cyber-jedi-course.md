@@ -267,11 +267,12 @@ Any code changes that update PII shoud be raised and considered for a change to 
 
 
 ### Personal Data
-- what is personal data? data that can be used to identify an individual
-  - doesn't include last 4 digits of cc b/c by itself it can't be tracked back to individual (but i'd argue it should still be protected b/c combined with other data it could be )
-  - includes anyone whose personal data we process
-  - includes employees of business partners, vendors
-  - not just confidential data (financial, address, etc), but also:
+- what is personal data?
+  - data that can be used to identify an individual
+  - this doesn't include last 4 digits of cc b/c by itself it can't be tracked back to individual (but i'd argue it should still be protected b/c combined with other data it could be )
+  - it includes anyone whose personal data we process
+  - it includes employees of business partners, vendors
+  - it includes not just confidential data (financial, address, etc), but also:
     - Health (physical and mental).
     - Philosophical and religious beliefs .
     - Political opinions.
