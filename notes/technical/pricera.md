@@ -271,11 +271,19 @@ gcloud projects list
 # Check application-default credentials
 gcloud auth application-default print-access-token
 
-# pull latest from main and merge, or
+# for FE & BE, pull latest from main and merge
 git pull origin main --rebase
 
-# make sure you're running the same code as what's in github
+# or make sure you're running the same code as what's in github
 git pull origin {feature branch}
+
+**new instructions**
+  - pull latest code for FE & BE
+  - run `pnpm install`
+  - stop any BE or docker containers that might be running
+  - in BE, run `./mvnw clean install -DskipTests -DskipITs`
+  - from FE: run `pnpm e2e` to run tests -- this will create containers for all components, include BE
+
 
 # building containers | BE, Docker terminal
 cd ~/repos/pricing-operations/pricera-backend

@@ -33,11 +33,35 @@ git branch # list all local branches
 git branch -r # list remote branches
 git branch -a # list all branches (local and remote)
 git branch -v # list remote branches verbose
-
 ```
 
-### Stash
+### Rebase
+Rebase adds one branch to the end of another, instead of creating a commit that merges two branches together.
+Rebase also avoid branches with multiple parents
 ```bash
+$ git config --list | grep rebase
+pull.rebase=true
+
+# rebase as an alternative to merge
+# example: rebase main to feature-branch
+git checkout feature-branch
+git rebase main
+
+git pull --rebase 
+# or
+git pull --ff-only
+``` 
+https://www.atlassian.com/git/tutorials/merging-vs-rebasing
+https://dev.to/molly/there-is-no-right-way-git-rebase-vs-merge-2hc5
+
+
+### Stash
+Save changes in index/cache and working directory
+
+```bash
+# stash everything in index and working directory
+git stash push -m ""
+
 # stash individual files
 git stash push -m "templates to add later" -- path/to/file1 /path/to/file2 /path/to/file3
 
@@ -53,8 +77,11 @@ git stash show -p stash@{0}
 # applies the latest (stash{0}), does not remove from stash
 git stash apply 
 
-# apply a specific stash (doesn't remove):
+# apply a specific stash (doesn't remove)
 git stash apply stash@{1}
+
+# apply and remove a specific stash
+git stash pop stash@{1}
 ```
 
 ### Reverting Changes
