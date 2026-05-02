@@ -139,3 +139,9 @@ Browser: GET /some-protected-page (now with valid session)
 
 
 intellij vm options stored: ~/Library/Application\ Support/JetBrains/IntelliJIdea2025.3/idea.vmoptions
+
+
+### Flyway
+Basics
+- all db changes are made via version-controlled migration scripts
+- the db tracks  
